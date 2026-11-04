@@ -32,3 +32,7 @@ def read_file(filename):
             return file.read()
     except:
         return None
+# TEST 6: Insecure deserialization pattern
+def load_user_data(data):
+    import pickle
+    return pickle.loads(data)
